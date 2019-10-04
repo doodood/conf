@@ -77,7 +77,7 @@ export default {
       ],
       miniVariant: false,
       right: true,
-      title: 'Vuetify.js'
+      title: 'Sport Conference'
     }
   }
 }
