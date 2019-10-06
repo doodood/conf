@@ -5,7 +5,12 @@
       :clipped="clipped"
       fixed
       app
+      temporary
+      overlay-color="primary"
     >
+    <v-app-bar color="primary">
+      <v-toolbar-title v-text="menuTitle" class="white--text"/>
+    </v-app-bar>
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -35,12 +40,12 @@
 
     </v-app-bar>
     <v-content>
-      <v-container>
+      <div class="app-content">
         <nuxt />
-      </v-container>
+      </div>
+
     </v-content>
     <v-navigation-drawer
-      v-model="rightDrawer"
       :right="right"
       temporary
       fixed
@@ -51,7 +56,7 @@
       :fixed="fixed"
       app
     >
-      <span>&copy; 2019</span>
+      <span>&copy;Don Dood 2019</span>
     </v-footer>
   </v-app>
 </template>
@@ -77,8 +82,19 @@ export default {
       ],
       miniVariant: false,
       right: true,
-      title: 'Sport Conference'
+      title: 'Sport Conference',
+      menuTitle: 'Menu'
     }
   }
 }
 </script>
+<style >
+  body {
+    font-family: "zilap-afro-demo", truetype;
+    white-space: pre-line;
+
+  }
+  .app-content{
+    margin-top: -01.5rem;
+  }
+</style>
