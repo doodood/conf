@@ -1,14 +1,15 @@
 <template>
-  <v-app light>
+  <v-app >
     <v-navigation-drawer
       v-model="drawer"
       :clipped="clipped"
       fixed
       app
       temporary
-      overlay-color="primary"
+
+
     >
-    <v-app-bar color="primary">
+    <v-app-bar color="deep-purple darken-4" dark>
       <v-toolbar-title v-text="menuTitle" class="white--text"/>
     </v-app-bar>
       <v-list>
@@ -30,12 +31,14 @@
     </v-navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
-      fixed
+      absolute
       app
+      color="deep-purple darken-2 white--text"
+      class="navigation"
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="white--text"  />
 
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title v-text="title" class="toolbar"/>
       <v-spacer />
 
     </v-app-bar>
@@ -52,12 +55,7 @@
     >
 
     </v-navigation-drawer>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy;Don Dood 2019</span>
-    </v-footer>
+
   </v-app>
 </template>
 
@@ -71,30 +69,70 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'Home',
           to: '/'
         },
         {
           icon: 'mdi-chart-bubble',
-          title: 'Inspire',
+          title: 'Contact',
           to: '/inspire'
         }
       ],
       miniVariant: false,
       right: true,
-      title: 'Sport Conference',
+      title: 'Team Bouesso',
       menuTitle: 'Menu'
     }
   }
 }
 </script>
 <style >
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'ZilapAfrica';
+  font-weight: normal;
+  src: url('~assets/fonts/ZilapAfrica.ttf') format('ttf');
+}
+@font-face{
+    font-family:"zilap-afro-demo";
+}
   body {
     font-family: "zilap-afro-demo", truetype;
-    white-space: pre-line;
+    background: linear-gradient(rgba(to right bottom,red,yellow,green,0.7)) transparent;
+    margin: 0;
+    padding: 0;
 
   }
-  .app-content{
-    margin-top: -01.5rem;
+  .v-toolbar__title{
+  background: -webkit-linear-gradient(to right, #ffb347, #fd1d1d, #fcb045); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffb347, #fd1d1d, #fcb045); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family:"ZilapAfrica";
   }
+  body > * {
+    white-space: pre-line;
+  }
+  .app-content{
+    margin-top: -1.5rem;
+  }
+  @font-face{
+    font-family:"zilap-afro-demo";
+    src: url("~assets/fonts/ZilapAfroDemo.ttf") format("truetype");
+}
+span.font1{font-family:"zilap-afro-demo";font-size:55px;text-transform:none;}
+ h1, h2 {
+  background-image: linear-gradient(rgba(to right bottom,red,yellow,green,0.7)) ;
+}
+.toolbar {
+  font-family:"zilap-afro-demo";
+  font-size: 200%;
+}
+.navigation {
+  top: 0; /* Stay on top */
+  transition: top 0.3s;
+  background-color: transparent;
+}
 </style>

@@ -44,7 +44,7 @@ export default {
 <style >
 #conf-thumbnail{
   width: 100%;
-  height: 350px;
+  height: 450px;
   background-size: cover;
   background-position: center;
 }

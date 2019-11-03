@@ -14,8 +14,7 @@ export default {
             { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: '"https://fontsme.com/wp-data/z/959/15959/file/Zilap Afro DEMO.otf"' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
 
         ]
     },
@@ -30,7 +29,9 @@ export default {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [],
+    plugins: [
+        "@/plugins/vue-lazyload"
+    ],
     /*
      ** Nuxt.js dev-modules
      */
