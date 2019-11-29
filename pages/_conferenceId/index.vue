@@ -44,9 +44,10 @@ export default {
 <style >
 #conf-thumbnail{
   width: 100%;
-  height: 450px;
+  height: 95vh;
   background-size: cover;
   background-position: center;
+  object-fit: cover;
 }
 
 </style>

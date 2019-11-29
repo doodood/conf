@@ -2,7 +2,7 @@
   <v-col :key="id">
         <v-card class="mx-auto" max-width="400" nuxt>
         <v-img class="white--text"
-                height="200px"
+                height="auto"
                 :src="thumbnailImage">
                 <v-card-title class="align-end fill-height">{{title}}</v-card-title>
                 </v-img>
@@ -60,3 +60,8 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+img {
+  object-fit: cover;
+}
+</style>
