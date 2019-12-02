@@ -47,7 +47,7 @@ export default {
         '@nuxtjs/pwa', [
             'storyblok-nuxt',
             {
-                accessToken: 'kZR6xaS0lc4CrD2MQGvQDAtt',
+                accessToken: process.env.NODE_ENV == 'production' ? 'kZR6xaS0lc4CrD2MQGvQDAtt' : 'y2CbrYMN4IB2kuX4HGH4tAtt',
                 cacheProvider: "memory"
             }
         ]
