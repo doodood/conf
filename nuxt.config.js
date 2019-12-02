@@ -47,7 +47,7 @@ export default {
         '@nuxtjs/pwa', [
             'storyblok-nuxt',
             {
-                accessToken: 'y2CbrYMN4IB2kuX4HGH4tAtt',
+                accessToken: 'kZR6xaS0lc4CrD2MQGvQDAtt',
                 cacheProvider: "memory"
             }
         ]
